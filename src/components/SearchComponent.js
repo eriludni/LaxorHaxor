@@ -1,29 +1,40 @@
 import React, { Component } from 'react';
-import Autocomplete from 'react-toolbox/lib/autocomplete';
+import ReactDOM from 'react-dom';
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+import AutoComplete from 'material-ui/AutoComplete';
 
-const source = {
-  'ES-es': 'Spain',
-  'TH-th': 'Thailand',
-  'EN-gb': 'England',
-  'EN-en': 'USA'
-};
+const source = [
+  'ES-es',
+  'Spain',
+  'TH-th',
+  'Thailand',
+  'EN-gb',
+  'England',
+  'EN-en',
+  'USA'
+];
 
 export default class SearchComponent extends Component {
 
+  constructor() {
+    super();
+    this.state = {};
+  }
 
   handleChange (value) {
-    this.setState({});
+
   };
 
   render() {
     return (
       <div className="SearchComponent">
-        <Autocomplete
-          direction="down"
-          selectedPosition="above"
-          label="Type an artist or film or whatevs"
-          onChange={this.handleChange}
-          source={source}/>
+        <MuiThemeProvider>
+          <AutoComplete
+              hintText="Type anything"
+              dataSource={source}
+              onUpdateInput={this.handleChange}
+           />
+         </MuiThemeProvider>
       </div>
     );
   }

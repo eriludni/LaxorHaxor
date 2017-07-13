@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import ReactDOM from 'react-dom';
 import SearchComponent from './components/SearchComponent.js';
 import './App.css';
 
@@ -9,9 +10,9 @@ class App extends Component {
         <div className="App-header">
           <h2>Welcome to React</h2>
         </div>
-        <p className="App-intro">
-          To get rect, edit <code>src/App.js</code> and save to reload.
-        </p>
+        <div className="App-body">
+          <SearchComponent />
+        </div>
       </div>
     );
   }

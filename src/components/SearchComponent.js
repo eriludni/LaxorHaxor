@@ -16,8 +16,9 @@ const source = [
 
 export default class SearchComponent extends Component {
 
-  constructor() {
+  constructor(props) {
     super();
+    this.callback = props.callback;
     this.state = {
       searchReuslt: [],
       hideSearch: false,
@@ -42,6 +43,10 @@ export default class SearchComponent extends Component {
         });
   }
 
+  movieSelected = (movieName) => {
+    this.callback(this.state.searchReuslt.find(m => m.trackName == movieName))
+  }
+
   render() {
     return (
       <div className="SearchComponent">
@@ -49,7 +54,8 @@ export default class SearchComponent extends Component {
           <AutoComplete
               hintText="Type anything"
               dataSource={this.state.searchReuslt.map(movie => {return movie.trackName})}
-              onUpdateInput={this.fetchMovies.bind(this)}
+              onUpdateInput={this.fetchMovies.bind(this)} // when user enters character in search field
+              onNewRequest={this.movieSelected.bind(this)} // when user clicks a search result
            />
          </MuiThemeProvider>
       </div>

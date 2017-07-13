@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import SearchComponent from './components/SearchComponent.js';
+import ResultComponent from './components/ResultComponent.js';
 import './App.css';
 
 class App extends Component {
@@ -18,15 +19,6 @@ class App extends Component {
 
   render() {
 
-    var result = <div></div>
-
-    console.dir(this.state);
-
-    if(this.state.selectedMovie != null) {
-      result = <div><img src={this.state.selectedMovie.artworkUrl100}/></div>
-      //result = <ResultComponent movie={this.state.selectedMovie} />
-    }
-
     return (
       <div className="App">
         <div className="App-header">
@@ -37,7 +29,7 @@ class App extends Component {
             <SearchComponent callback={this.movieSelected.bind(this)}/>
           </div>
           <div>
-            {result}
+            <ResultComponent movie={this.state.selectedMovie} />
           </div>
         </div>
       </div>

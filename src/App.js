@@ -8,7 +8,9 @@ class App extends Component {
 
   constructor() {
     super();
-    this.state = {};
+    this.state = {
+      selectedMovie: {}
+    };
   }
 
   movieSelected(movie) {
@@ -18,6 +20,8 @@ class App extends Component {
   }
 
   render() {
+
+    console.log(this.state);
 
     return (
       <div className="App">

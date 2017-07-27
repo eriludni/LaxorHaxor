@@ -5,7 +5,6 @@ import ResultComponent from './components/ResultComponent.js';
 import './App.css';
 
 class App extends Component {
-
   constructor() {
     super();
     this.state = {
@@ -20,8 +19,6 @@ class App extends Component {
   }
 
   render() {
-
-    console.log(this.state);
 
     return (
       <div className="App">

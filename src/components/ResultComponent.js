@@ -17,6 +17,7 @@ export default class ResultComponent extends Component {
       result = <div className="ResultComponent">
                 <img src={this.props.movie.artworkUrl100}
                   className="ResultComponent-image"/>
+                  <p className="MovieDescription">{this.props.movie.longDescription}</p>
                 {this.props.movie.trackName}
               </div>
     }

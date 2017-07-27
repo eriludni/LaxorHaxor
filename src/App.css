@@ -54,6 +54,9 @@ html {
   float: left;
   width: 200px;
 }
+.MovieDescription {
+  
+}
 
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }

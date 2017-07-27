@@ -17,10 +17,12 @@ export default class ResultComponent extends Component {
       result = <div className="ResultComponent">
                 <img src={this.props.movie.artworkUrl100}
                   className="ResultComponent-image"/>
-                  <b className="Title">
+                  <div className="Title">
                     {this.props.movie.trackName}
-                  </b>
-                  <p className="MovieDescription">{this.props.movie.longDescription}</p>
+                  </div>
+                  <div className="MovieDescription">
+                    {this.props.movie.longDescription}
+                  </div>
               </div>
     }
     return(

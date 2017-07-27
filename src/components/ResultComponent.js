@@ -23,6 +23,10 @@ export default class ResultComponent extends Component {
                   <div className="MovieDescription">
                     {this.props.movie.longDescription}
                   </div>
+                  <div className="QuickFacts">
+                    {this.props.movie.primaryGenreName}
+                    {Math.floor(parseInt(this.props.movie.trackTimeMillis)/60000)+" min"}
+                  </div>
               </div>
     }
     return(

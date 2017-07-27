@@ -46,7 +46,6 @@ html {
   margin-left: auto;
   margin-right: auto;
   border-radius: 2px;
-  padding: 16px;
   background-color: #fff;
 }
 
@@ -56,6 +55,13 @@ html {
 }
 .MovieDescription {
   
+}
+
+.Title {
+  font-size: 18pt;
+  float: left;
+  margin-left: 8px;
+
 }
 
 @keyframes App-logo-spin {

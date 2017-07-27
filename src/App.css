@@ -1,3 +1,7 @@
+html {
+  background-color: #F2F2F2;
+}
+
 .App {
   text-align: center;
 }
@@ -7,18 +11,31 @@
   height: 80px;
 }
 
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
-}
-
 .App-intro {
   font-size: large;
 }
-.ResultComponent{
+
+.App-body {
+  margin-top: 100px;
+}
+
+.ResultComponent {
   margin-top: 20px;
+}
+
+.Search-box-field {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.Search-box-background {
+  height: 50px;
+  width: 75%;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 2px;
+  padding: 16px;
+  background-color: #fff;
 }
 
 @keyframes App-logo-spin {

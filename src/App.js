@@ -25,12 +25,11 @@ class App extends Component {
 
     return (
       <div className="App">
-        <div className="App-header">
-          <h2>Welcome to React</h2>
-        </div>
         <div className="App-body">
-          <div>
-            <SearchComponent callback={this.movieSelected.bind(this)}/>
+          <div className="Search-box-background">
+            <SearchComponent
+              className="Search-box-field"
+              callback={this.movieSelected.bind(this)}/>
           </div>
           <div>
             <ResultComponent movie={this.state.selectedMovie} />

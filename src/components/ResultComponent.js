@@ -10,11 +10,13 @@ export default class ResultComponent extends Component {
   }
 
   render() {
-    var result = <div>hn</div>
+    var result = <div></div>
     console.dir(this.props.movie);
 
-    if(this.props.movie != null){
-      result = <div>
+    if(this.props.movie.trackName != null){
+      result = <div className="ResultComponent">
+        <img src={this.props.movie.artworkUrl100}
+          className="ResultComponent-image"/>
         {this.props.movie.trackName}
       </div>
     }

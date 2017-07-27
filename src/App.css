@@ -31,11 +31,28 @@ html {
 .Search-box-background {
   height: 50px;
   width: 75%;
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,0.50);
   margin-left: auto;
   margin-right: auto;
   border-radius: 2px;
   padding: 16px;
   background-color: #fff;
+}
+
+.ResultComponent {
+  height: 300px;
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,0.50);
+  width: 75%;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 2px;
+  padding: 16px;
+  background-color: #fff;
+}
+
+.ResultComponent-image {
+  float: left;
+  width: 200px;
 }
 
 @keyframes App-logo-spin {

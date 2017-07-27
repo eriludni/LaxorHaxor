@@ -2,7 +2,9 @@ import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import SearchComponent from './components/SearchComponent.js';
 import ResultComponent from './components/ResultComponent.js';
+import VideoComponent from './components/VideoComponent.js';
 import './App.css';
+import "../node_modules/video-react/dist/video-react.css";
 
 class App extends Component {
   constructor() {
@@ -29,7 +31,12 @@ class App extends Component {
               callback={this.movieSelected.bind(this)}/>
           </div>
           <div>
-            <ResultComponent movie={this.state.selectedMovie} />
+            <div>
+              <ResultComponent movie={this.state.selectedMovie} />
+            </div>
+            <div>
+              <VideoComponent movie={this.state.selectedMovie} />
+            </div>
           </div>
         </div>
       </div>
